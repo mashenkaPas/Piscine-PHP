@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>balloon</title>
+    <style>
+        #balloon{
+           width: 200px;
+           height: 200px; 
+           background-color: red;
+           border-radius: 50%; 
+        }
+    </style>
+</head>
+<body>
+    <div id="balloon" onclick="myFunc()" onmouseleave="myFunc2()"></div>
+    <script>
+
+        function myFunc() {
+            var currentWidth = getComputedStyle(document.getElementById("balloon")).getPropertyValue("width");
+            var currentColor = getComputedStyle(document.getElementById("balloon")).getPropertyValue("background-color");
+            let bColor;
+
+            if (currentColor == "rgb(255, 0, 0)")
+                bColor = "green";
+            else if (currentColor == "rgb(0, 128, 0)")
+                bColor = "blue";
+            else
+                bColor = "red";
+
+            if(currentWidth == "420px") {
+                document.getElementById("balloon").style.cssText = 'width: 200px; height: 200px; background-color: ' + bColor;
+            }
+            else {
+        
+                var widthToBe = (parseInt(currentWidth) + 10) + "px";
+                document.getElementById("balloon").style.cssText = 'width: ' + widthToBe + '; height: ' + widthToBe + '; background-color: ' + bColor;
+            }
+        }
+
+        function myFunc2() {
+            var currentWidth = getComputedStyle(document.getElementById("balloon")).getPropertyValue("width");
+            var currentColor = getComputedStyle(document.getElementById("balloon")).getPropertyValue("background-color");
+            let bColor;
+
+            if (currentColor == "rgb(255, 0, 0)")
+                bColor = "blue";
+            else if (currentColor == "rgb(0, 128, 0)")
+                bColor = "red";
+            else
+                bColor = "green";
+
+            if(currentWidth == "200px") {
+                document.getElementById("balloon").style.cssText = 'background-color: ' + bColor;
+            }
+            else {
+                var widthToBe = (parseInt(currentWidth) - 5) + "px";
+                document.getElementById("balloon").style.cssText = 'width: ' + widthToBe + '; height: ' + widthToBe + '; background-color: ' + bColor;
+            }
+        }
+        </script>    
+</body>
+</html>

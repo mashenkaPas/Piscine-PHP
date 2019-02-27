@@ -1,0 +1,202 @@
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+* {
+  min-width: 900px;
+  margin: 0;
+}
+
+p {
+  font-size: 1vmin;
+  margin:0;
+  font-family: Verdana;
+}
+
+body {
+  margin: 0;
+  min-width: 900px;
+}
+
+.sidebar {
+  background-color: #909090;
+  color: #444;
+  box-shadow: 10px 10px 5px black;
+  width: 11vw;
+  height: 75%;
+  display: flex;
+  justify-content: center;
+}
+
+.sidebar-content {
+  display: flex;
+  flex-direction: column;
+  width: 7vmin;
+}
+
+.content {
+  width: 50vw;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header {
+  background-color: #909090;
+  width: 100%;
+  height: 15vh;
+  margin-top: 2vh;
+}
+
+.wrapper {
+  width: 80vw;
+  color: #444;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.main {
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  background-color:#505050;
+}
+
+.header,
+.footer,
+.sidebar,
+.sidebar2,
+.content{
+  background-color: #909090;
+  border-radius: 10px;
+  box-shadow: 10px 10px 5px black;
+}
+
+.main-content {
+  display: flex;
+  width: 75vw;
+  height: 60vh;
+  margin: 2.5vw;
+  justify-content: space-between;
+}
+
+#day42 {
+  margin-left: 2.5vw;
+  display: inline-block;
+  width: 50%;
+  height: 100%;
+}
+
+#top-right {
+  margin: 1vmin;
+  width: 2vw;
+  height: 90%;
+  float: right;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+#reload {
+  width: 100%;
+}
+
+#close {
+  width: 100%;
+}
+
+#loupe {
+  width: 13%;
+  height: 13vh;
+  background: transparent;
+  position: fixed;
+  margin-left: 22vw;
+  margin-top: 4vh;
+}
+
+#cluster {
+  width: 97%;
+  height: 97%;
+}
+
+#ikea {
+  width: 6vw;
+  height: 14vh;
+  margin-top: 12vh;
+  margin-left: -6vw;
+  position: fixed;
+}
+
+#apple {
+  position: fixed;
+  width: 9vw;
+  height: 14vh;
+  margin-top: 11vh;
+  margin-left: 18.5vw;
+}
+
+.left-block{
+  width: 10%;
+  display: block;
+  background-color:  #909090 ;
+  height: 60%;
+  padding-bottom: 2%;
+}
+
+#main,#arrow, #eye,#tools, #chat-icon, #book, #towel  {
+  width: 100%;
+  margin-top: 1vh;
+  border: 3px solid #909090;
+}
+
+#main:hover,#arrow:hover, #eye:hover,#tools:hover, #chat-icon:hover, #book:hover, #towel:hover, .bricks:hover {
+  border: 3px solid red;
+}
+
+.bricks {
+  border: 3px solid #909090;
+  margin-top: 1vh;
+  width: 9vmin;
+  height: 7vmin;
+  background-image: url("resources/brick.jpg");
+  margin-left: -1vmin;
+}
+
+.footer{
+  background-color: #98FB98;
+  width: 32vw;
+  height: 7vh;
+  margin-top: 70vh;
+  box-shadow: 10px 10px 5px black;
+  border-radius: 10px;
+  padding: 1%;
+  padding-bottom: 5%;
+  position: fixed;
+}
+
+#formulaire {
+  width: 70%;
+  height: 10%;
+  display: inline-block;
+  margin-top: 1%;
+  font-size: 0.8vw;
+}
+
+#ordinateur {
+  text-shadow: 6px 6px 5px red;
+}
+
+#lllaaaa {
+  font-size: 2vw;
+  font-family: Georgia;
+}
+
+#italic {
+  font-style: italic;
+}
+
+#repondre {
+  display: inline-block;
+  font-size: 0.7vw;
+  width: 25%;
+}

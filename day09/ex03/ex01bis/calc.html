@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>calc</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+ <style>
+     .body{
+         display: flex;
+         align-items: stretch;
+     }
+ </style>
+</head>
+<body>
+    <form id="myForm">
+        <input type="text" name="left_field">
+        <select name="operator">
+                <option value="+">+</option>
+                <option value="-">-</option>
+                <option value="/">/</option>
+                <option value="*">*</option>
+                <option value="%">%</option>
+              </select>
+        <input type="text" name="right_field">
+        <input type="submit" value="try me" name="b">
+        
+    </form>
+  
+    <script>
+            setInterval(function(){ alert("Please, use me..."); }, 30000);
+            $("form").submit(function( event ) {
+                var inputs = $('#myForm :input');
+                var values = {};
+                inputs.each(function() {
+                     values[this.name] = $(this).val();
+                });
+                var a = parseInt(values.left_field);
+                m = values.operator;
+                var b = parseInt(values.right_field);
+                if (a < 0 || b < 0 || isNaN(a) || isNaN(b))
+                {
+                    alert("Error :(");
+                    console.log("Error :(");
+                }
+                else if( m == '+'){
+                    var res =a + b; 
+                    alert(res);
+                    console.log(res);
+                }
+                else if (m == '-'){
+                    var res = a - b;
+                    alert(res);
+                    console.log(res);
+                }
+                else if (m =='*'){
+                    var res  = a * b;
+                    alert(res);
+                    console.log(res);  
+                }
+                else if (m == '/')
+                {
+                    if (b == 0){
+                    alert("It’s over 9000!");
+                    console.log("It’s over 9000!");
+                    }else {
+                    alert(a / b);
+                    console.log(a / b);
+                    }
+                }
+                else if (m == '%')
+                {
+                    if (b == 0){
+                    alert("It’s over 9000!");
+                    console.log("It’s over 9000!");
+                    }else {
+                    alert(a % b);
+                    console.log(a % b);
+                    }
+                }
+               event.preventDefault();
+            });
+            </script>
+        
+</body>
+</html>
